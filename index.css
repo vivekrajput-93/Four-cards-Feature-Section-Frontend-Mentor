@@ -1,0 +1,174 @@
+:root {
+    
+--Red: hsl(0, 78%, 62%);
+--Cyan: hsl(180, 62%, 55%);
+--Orange: hsl(34, 97%, 64%);
+--Blue: hsl(212, 86%, 64%);
+
+
+
+--Very-Dark-Blue: hsl(234, 12%, 34%);
+--Grayish-Blue: hsl(229, 6%, 66%);
+--Very-Light-Gray: hsl(0, 0%, 98%);
+
+
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--Very-Light-Gray);
+    width: 100%;
+    height: 100vh;
+}
+
+.text {
+    display: block;
+    margin: 2rem;
+    width: 50%;
+    margin: auto;
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.text h1 {
+    font-weight: 100;
+    color: var(--Grayish-Blue);
+    padding-bottom: .5rem;
+    font-size: 2rem;
+}
+
+.text h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--Very-Dark-Blue);
+}
+
+.text p {
+    width: 75%;
+    display: block;
+    margin: auto;
+    color: var(--Grayish-Blue);
+    margin-bottom: 6rem;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 2rem;
+    grid-gap: 1rem;
+}
+
+.card {
+    margin-top: 4rem;
+    padding: 1.5rem;
+    width: 80%;
+    border-radius: 5px;
+    box-shadow: var(--Very-Light-Gray) 0px 13px 27px -5px, var(--Blue) 0px 8px 16px -8px;
+}
+
+.cards .one {
+    position: relative;
+    left: 4rem;
+    border-top: .5rem solid var(--Cyan);
+}
+
+.cards .two {
+    border-top: .5rem solid var(--Red);
+    position: relative;
+    bottom: 35%;
+}
+
+.cards .three {
+    position: relative;
+    right: 4rem;
+    border-top: .5rem solid var(--Blue);
+}
+
+.cards .four {
+    position: relative;
+    left: 105%;
+    border-top: .5rem solid var(--Orange);
+    bottom: 55%;
+}
+
+.card h1 {
+    font-size: 1.2rem;
+    padding-bottom: .5rem;
+}
+
+.card p {
+    line-height: 1.5rem;
+    padding-bottom: 1rem;
+    color: var(--Grayish-Blue);
+    font-size: .8rem;
+    width: 90%;
+}
+
+.card img {
+    position: relative;
+    left: 75%;
+}
+
+
+@media screen and (max-width: 940px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card {
+        position: relative;
+        left: 0;
+        top: 0;
+    }
+
+    #trip {
+        position: relative;
+        left: -5px;
+        top: 0;
+        bottom: 0;
+    }
+
+    .cards .three {
+        position: relative;
+        left: 60px;
+        bottom: 0;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .cards {
+        grid-template-columns: repeat(1, 1fr);
+        display: block;
+        margin-left: -0rem;
+    }
+
+    .text {
+        width: 90%;
+    }
+
+    .two, #trip {
+        position: relative;
+        left: 4rem;
+    }
+}
+
+@media screen and (max-width: 376px)  {
+
+    .text {
+        font-size: 1rem;
+    }
+
+    .cards {
+        margin-left: -2rem;
+    }
+
+}
